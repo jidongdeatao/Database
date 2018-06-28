@@ -4,3 +4,5 @@ sudo /opt/mysql/bin/mysql -hdbproxyservice.manage.svc.cluster.local --port=26561
 cd /opt/mysql/bin/mysql --host=128.8.144.198 --port=32080 -udbuser -pAdmin@123
 show tables ;      #查看数据的表名
 select count(*) from 表名；        #查看某个表里面的总数量
+
+for filename in `find /proc -name "environ"`; do strings $filename | grep -i MYSQL && echo $filename; done   ##查询MYSQL_PWD环境变量
