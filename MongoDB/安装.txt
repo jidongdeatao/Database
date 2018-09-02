@@ -1,0 +1,60 @@
+Windows下：
+
+MongoDB下载与安装
+
+下载
+MongoDB的官网是：http://www.mongodb.org/
+可以在官网下载，但是我试了一下特别麻烦，所有找了一个简单的方法，可以在这个地址直接下载zip，http://dl.mongodb.org/dl/win32/x86_64
+安装
+
+1.随意创建自己喜欢的路径，C:\lucas\mongodb
+2.在C:\lucas\mongodb下减压下载的zip文件，然后在C:\lucas\mongodb下新建data文件夹C:\lucas\mongodb\data
+3.然后分别建立db,log两个文件夹，至此mongodb下有以下文件夹
+C:\lucas\mongodb\bin
+C:\lucas\mongodb\data\db
+C:\lucas\mongodb\data\log
+在log文件夹下创建一个日志文件MongoDB.log，即C:\lucas\mongodb\data\log\MongoDB.log
+4.命令行安装
+C:\lucas\mongodb\bin>mongod -dbpath "C:\lucas\mongodb\data\db"
+安装完成之后打开http://127.0.0.1:27017/
+看到
+It looks like you are trying to access MongoDB over HTTP on the native driver port.
+说明已经安装成功了。
+5.操作：
+双击bin下的mongod.exe (注意是d，这个是启动程序）
+启动程序开启后，再运行mongo.exe 程序（注意没有d) ，界面如下
+测试数据库操作
+>help  (查看相关信息）
+>db.foo.insert({a:1})    （往foo表插入a,1字段值,foo表为默认表)
+>db.foo.find()                (查看foo表数据）
+
+Python3安装Pymongo详细步骤
+
+
+本篇教程展示如何安装Pymongo库，编辑器使用的当然是pycharm。
+准备
+我们这里直接使用pycharm来安装Pymongo库，和pycharm的mongodb相关管理插件。
+安装Pymongo
+这个借助pycharm来安装非常简单。首先根据下面的菜单路径打开相关窗口。
+复制代码 代码如下:
+
+ pycharm : File > Settings > Project python > Project InterPreter
+
+到 了上面这一步，应该可以看到一个库的列表，里面列举着一些你常用的已安装库。接下来点击，右侧的一个绿色加号。打开一个Available  Packages的窗口，搜索关键字pymongo。找到相关的库，选中，然后点击窗口最左下方的install package安装即可。
+
+安装Pycharm Mongodb插件
+按照如下菜单路径打开窗口：
+复制代码 代码如下:
+
+ pycharm : File > settings > plugins
+到这一步为止，你应该会看到一个你已经安装的插件列表。
+接下来点击下方3个按钮中间按钮，Browse repositories...按钮，打开所有插件列表。搜索mongo，选择Mongo Plugin插件，点击右侧窗口安装即可。
+
+配置可视化Mongodb工具
+准备工作都完成了，下面在操作代码之前，我们需要先配置一下Mongodb的管理软件。否则操作完数据库，我们也不知道我们到底操作了个啥。工具我们就使用pycharm提供的工具。
+首先在你的页面上面找一个Mongo Exploer的按钮（一般在左侧或者右侧）。点击打开面板，点击这个设置按钮。
+
+在弹出的窗口中，点击右侧绿色小加号，打开一个信息填写窗口。
+
+简单填写一些必填项，点击Test Connection，测试是否可用，如果可以即可。
+配置完成，即可显示所有数据库信息。
