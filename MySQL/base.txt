@@ -1,10 +1,68 @@
 MySQL数据库基础入门：
     目录：
     1.安装与配置（参照文档）
-    2.
+    2.基本操作
     
     
     
+    
+    
+    
+    二、基本操作
+    数据库的常见命令：
+        创建数据库： CREATE DATABASE databasename；
+        查看当前服务器下的数据库列表：show databases;
+        查看某个数据库：show create database databasename；
+        修改数据库的编码格式：alter database databasename character set = utf8;
+        删除数据库： drop dateabase datebasename；
+        显示当前已经打开的数据库：select database();
+    
+    数据库表的常见命令：
+        创建数据表：create table tablename（column_name data_type,......);
+        从某个数据库中查看其所有的数据表：show tables from databasename；
+        从某个数据表中查看数据表结构：show columns from tablename；
+        数据表的常用操作：
+            1.基础
+            增、删、改、查
+            insert
+            insert into tablename column_name vaules(expr...,) 
+            或 insert into tablename set column_name =expr,... （这种方式与上面那种方式对比在于此方法可以使用子查询，只能插入一条数据)
+            或 insert into tablename column_name select ...（此方法可以将查询结果插入到指定数据表) 
+            detele
+            delete from tablename where 条件；
+            update
+            update tabename set column_name1 = expr,...
+            select
+            对于where语句(条件表达式：对记录进行过滤，如果没有指定where子句，则显示所有记录)
+                其后常见的参数:
+                1）group by
+                    查询结果分组 group by column_name|position ASC|DESC;(ASC是默认的升序，DESC是降序)
+                    可带有having (分组条件)
+                        having where_conditon 注意事项：聚合函数或条件出现在select条件中
+                2）order by
+                    对查询结果进行排序
+                    
+                3）limit 
+                    限制查询结果返回的数量
+                    limit 
+            2.子查询与连接
+                        
+    
+    
+    MySQL的数据类型：
+        #在设计表的时候时，是必须对表的coloum值的类型进行选择的
+        整型：TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT
+        浮点型：FLOAT[(M,D)] DOUBLE[(M,D)]
+        日期时间型：YEAR、TIME、DATE、DATETIME、TIMESTAMP
+        字符型：CHAR(M)、VARCHAR(M)、TINYTEXT、TEXT、MEDIUMTEXT、LONGTEXT、ENUM('value'...)、SET('value'...)
+        
+        
+    
+    
+    
+    修改MySQL提示符方式两种：
+    1）连接上客户端后，通过prompt提示符，即mysql > prompt 提示符
+    2）shell > mysql -uroot -proot --prompt 提示符
     
     
     
