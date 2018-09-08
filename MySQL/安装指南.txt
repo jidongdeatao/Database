@@ -1,7 +1,18 @@
 MySQL软件的安装与配置
 
 1.Linux环境
-
+在Ubuntu上安装MySQL：
+  #安装 MySQL 服务端、核心程序
+  sudo apt-get install mysql-server
+  #安装 MySQL 客户端
+  sudo apt-get install mysql-client
+  在安装过程中会提示确认输入YES，设置 root 用户密码（之后也可以修改）等，稍等片刻便可安装成功。
+  安装结束后，用命令验证是否安装并启动成功：
+  sudo netstat -tap | grep mysql
+  如果出现mysql的端口号进程，则安装成功：
+  此时，可以根据自己的需求修改 MySQL 的配置文件（my.cnf）,使用以下命令:
+  sudo gedit /etc/mysql/my.cnf
+  至此，MySQL 已经安装、配置完成，可以正常使用了。
 
 
 2.Windows环境
