@@ -62,3 +62,6 @@ Redis基础操作:
   hlen -- 返回散列包含域（field)的数量
   hdel -- 删除散列指定的域（field）
   hexists -- 判断是否存在
+
+
+/opt/redis/bin/redis-cli -cipherdir /opt/redis/etc/cipher/ -p 32091 -h 128.118.12.213 -a atsrdb@dbuser@Admin@123   #登录redis数据库
