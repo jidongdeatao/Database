@@ -1,12 +1,10 @@
 Windows下：
-
 MongoDB下载与安装
 
 下载
 MongoDB的官网是：http://www.mongodb.org/
-可以在官网下载，但是我试了一下特别麻烦，所有找了一个简单的方法，可以在这个地址直接下载zip，http://dl.mongodb.org/dl/win32/x86_64
+可以在官网下载，但是特别麻烦，所有找了一个简单的方法，可以在这个地址直接下载zip，http://dl.mongodb.org/dl/win32/x86_64
 安装
-
 1.随意创建自己喜欢的路径，C:\lucas\mongodb
 2.在C:\lucas\mongodb下减压下载的zip文件，然后在C:\lucas\mongodb下新建data文件夹C:\lucas\mongodb\data
 3.然后分别建立db,log两个文件夹，至此mongodb下有以下文件夹
@@ -29,8 +27,6 @@ It looks like you are trying to access MongoDB over HTTP on the native driver po
 >db.foo.find()                (查看foo表数据）
 
 Python3安装Pymongo详细步骤
-
-
 本篇教程展示如何安装Pymongo库，编辑器使用的当然是pycharm。
 准备
 我们这里直接使用pycharm来安装Pymongo库，和pycharm的mongodb相关管理插件。
