@@ -1,5 +1,5 @@
 # MongoDB数据库
-## 介绍
+## 介绍：面向文档的数据库
 - 形式
 {"id":3,"greeting":"hello,world"}
 - 特性
