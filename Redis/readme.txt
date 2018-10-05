@@ -14,6 +14,18 @@ https://github.com/jidongdeatao/Python/tree/master/Python_OperateKu/Redis_Operat
 Java操作Redis，详见
 
 
+Redis图形化管理工具：
+Redis Desktop Manager
+下载及安装：官网：
+https://redisdesktop.com/
+GitHub：
+https://github.com/uglide/RedisDesktopManager
+下载地址：
+https://redisdesktop.com/download
+指导文档：
+http://docs.redisdesktop.com/en/latest/
+
+
 Redis基础操作:
 1.字符串(Strings)相关操作
   set -- 设置值
