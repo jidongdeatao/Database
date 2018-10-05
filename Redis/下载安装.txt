@@ -1,0 +1,6 @@
+官网：
+https://redis.io/
+中文网站；
+http://www.redis.cn/
+windows系统可以下载使用:
+https://github.com/MicrosoftArchive/redis/releases
