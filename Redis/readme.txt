@@ -22,6 +22,7 @@ GitHub：
 https://github.com/uglide/RedisDesktopManager
 下载地址：
 https://redisdesktop.com/download
+附件：windows-redis，已经提供了Windows系统上可以使用的Redis Desktop Manager可以直接下载
 指导文档：
 http://docs.redisdesktop.com/en/latest/
 
