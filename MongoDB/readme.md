@@ -23,4 +23,5 @@ https://docs.mongodb.com/
 - 项目练习：详见-练习任务.txt
 ## 图形化管理工具-Robomongo
 - 官网：https://robomongo.org/
-
+## python操作MongoDB
+https://github.com/jidongdeatao/Python/tree/master/Python_OperateKu/MongoDB_Operate
