@@ -24,4 +24,4 @@ https://docs.mongodb.com/
 ## 图形化管理工具-Robomongo
 - 官网：https://robomongo.org/
 ## python操作MongoDB
-https://github.com/jidongdeatao/Python/tree/master/Python_OperateKu/MongoDB_Operate
+- 详见：https://github.com/jidongdeatao/Python/tree/master/Python_OperateKu/MongoDB_Operate
