@@ -20,6 +20,7 @@ https://docs.mongodb.com/
 - 读取数据
 - 修改数据
 - 删除数据
-
+- 项目练习：详见-练习任务.txt
 ## 图形化管理工具-Robomongo
 - 官网：https://robomongo.org/
+
