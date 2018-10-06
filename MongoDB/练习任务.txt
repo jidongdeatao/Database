@@ -1,0 +1,45 @@
+练习任务一：
+1.创建一个学生信息表(至少包含：姓名、性别、成绩、年龄)2.写入15条不同的数据
+
+db.students.insertMany(
+[
+    {name: "bob", age:16, gender:"male", grade:95},
+    {name: "ana", age:18, gender:"female", grade:45},
+    {name: "xi", age:15, gender:"male", grade:75},
+    {name: "bob1", age:16, gender:"male", grade:95},
+    {name: "ana1", age:18, gender:"female", grade:45},
+    {name: "jack", age:18, gender:"male", grade:85},
+    {name: "tom", age:19, gender:"male", grade:65},
+    {name: "lily", age:16, gender:"female", grade:59},
+    {name: "lucy", age:18, gender:"female", grade:68},
+    {name: "lilei", age:18, gender:"female", grade:68},
+    {name: "hanmeimei", age:16, gender:"female", grade:90},
+    {name: "harry", age:16, gender:"male", grade:81},
+    {name: "json", age:16, gender:"male", grade:75},
+    {name: "jim", age:16, gender:"male", grade:36},
+    {name: "rose", age:16, gender:"female", grade:91},
+    {name: "moli", age:16, gender:"female", grade:93},
+    {name: "linda", age:16, gender:"female", grade:96}
+]
+)
+
+ 
+3.查询所有的男生数据(只需要学生的姓名和年龄)
+> db.students.find({gender:"male"},{age:true,name:1,_id:0})
+{ "name" : "bob", "age" : 16 }{ "name" : "xi", "age" : 15 }{ "name" : "bob1", "age" : 16 }{ "name" : "jack", "age" : 18 }{ "name" : "tom", "age" : 19 }{ "name" : "harry", "age" : 16 }{ "name" : "json", "age" : 16 }{ "name" : "jim", "age" : 16 }
+4.查询成绩几个的学生信息(学生成绩大于或等于60分)
+> db.students.find({grade :{$gte:60}})
+5.查询所有18岁的男生和16岁女生的数据
+> db.students.find({$or :[{gender:"female",age:16},{gender:"male",age:18}]})
+{ "_id" : ObjectId("5a9df2e48a86b467d4a2c44e"), "name" : "jack", "age" : 18, "gender" : "male", "grade" : 85 }{ "_id" : ObjectId("5a9df2e48a86b467d4a2c450"), "name" : "lily", "age" : 16, "gender" : "female", "grade" : 59 }{ "_id" : ObjectId("5a9df2e48a86b467d4a2c453"), "name" : "hanmeimei", "age" : 16, "gender" : "female", "grade" : 90 }{ "_id" : ObjectId("5a9df2e48a86b467d4a2c457"), "name" : "rose", "age" : 16, "gender" : "female", "grade" : 91 }{ "_id" : ObjectId("5a9df2e48a86b467d4a2c458"), "name" : "moli", "age" : 16, "gender" : "female", "grade" : 93 }{ "_id" : ObjectId("5a9df2e48a86b467d4a2c459"), "name" : "linda", "age" : 16, "gender" : "female", "grade" : 96 }
+6.按照学生的分数进行排序从小到大
+> db.students.find().sort({grade:1})
+从大到小，倒序
+> db.students.find().sort({grade:-1})
+7.将所有女生年龄增加一岁
+> db.students.update({gender:"female"}, {$inc:{age:1}}, {multi:true})
+WriteResult({ "nMatched" : 9, "nUpserted" : 0, "nModified" : 9 })
+
+
+
+
